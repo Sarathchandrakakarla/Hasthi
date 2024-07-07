@@ -41,8 +41,8 @@ def generate_order_id(size=5, chars=string.ascii_lowercase + string.digits):
     order_id = ''.join(random.choice(chars) for _ in range(size))
     return 'hst_' + order_id
 
-#stripe.api_key = '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'
-stripe.api_key = 'sk_test_51OFGoqSFec7g44XJc99LR1Mk4nJgc7fjb5JNUpIAS6DT8S8UQXU8vY2IOmC4LmAtRIdqBtpYyQI1Ykg2v86eCnYS00pdPn6Kl9'
+#stripe.api_key = ''
+stripe.api_key = ''
 def create_checkout_session(amount,product):
   session = stripe.checkout.Session.create(
     line_items=[{
